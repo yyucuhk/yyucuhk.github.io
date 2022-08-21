@@ -1,4 +1,4 @@
-## Hallo! This is Yue YU!
+## Hallo! This is Yue YU（俞越）!
 
 I am currently a Ph.D. student at the Chinese Unveristy of Hong Kong. Pls kindly check my latest [CV](/CV_YUYUE.pdf).
 
@@ -6,7 +6,7 @@ During my postgraduate studies, I focus on design, fabrication, and characteriza
 
 I'm always open to different things and willing to learn something new. 
 
-##### Ich suche Liebe und Frieden in meinem Herzen. Die Bekannten und unbekannten Weltern, ich kann keinen Moement warten!
+##### Ich suche Liebe und Frieden in meinem Herzen. Die bekannten und unbekannten Weltern, ich kann keinen Moement warten!
 
 
 
