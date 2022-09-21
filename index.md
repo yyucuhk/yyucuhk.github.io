@@ -1,5 +1,5 @@
 ## Hallo! This is Yue YU（俞越）! 
-### I am looking for a postdoctoral position beginning in 2023. Contact me by yyucuhk@link.cuhk.edu.hk for more information.
+### I am looking for a postdoctoral position beginning in 2023. Contact me by yyucuhk@link.cuhk.edu.hk.
 
 I am currently a Ph.D. student at the Chinese Unveristy of Hong Kong. Pls kindly check my latest [CV](/CV_YUYUE.pdf).
 
