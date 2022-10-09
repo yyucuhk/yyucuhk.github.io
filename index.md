@@ -5,7 +5,7 @@ I am currently a Ph.D. student at the Chinese Unveristy of Hong Kong. Pls kindly
 
 During my postgraduate studies, I focus on design, fabrication, and characterization of high-performance micro/nanodevices on various integrated photonic platforms including lithium niobate on insulator, silicon on insulator, silica, etc. A brief introduction to my recent works will be added to this page later.
 
-I'm always open to different things and willing to learn something new. 
+
 
 
 
