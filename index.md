@@ -2,7 +2,7 @@
 ## Hallo! This is Yue YU（俞越）! 
 
 
-I am currently a postdoc at University of Southern California and supervised by Prof. Mengjie Yu. 
+I am currently a postdoc at [University of Southern California](https://sites.usc.edu/mjlab/) and supervised by Prof. Mengjie Yu. 
 Before that, I spent six years at [CUHK](https://opto-ee-cuhk-edu-hk.translate.goog/?_x_tr_sch=http&_x_tr_sl=en&_x_tr_tl=zh-CN&_x_tr_hl=zh-CN&_x_tr_pto=sc) as a postgraduate student. Pls kindly check my latest [CV](/CV_YUYUE.pdf).
 
 During my postgraduate studies, I focus on design, fabrication, and characterization of high-performance micro/nanodevices on various integrated photonic platforms including lithium niobate on insulator, silicon on insulator, silica, etc. My works can be divided into following two parts:
