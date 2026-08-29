@@ -19,8 +19,22 @@
   </header>
   <main>
     <section class="hero" id="top">
-      <div class="hero-copy"><p class="eyebrow">Integrated photonics · quantum transduction</p><h1>YUE<br><span>YU</span></h1><p class="hero-intro">I make photons and phonons do useful things on a chip.</p></div>
-      <a class="portrait" href="#about" aria-label="Read about Yue Yu"><img src="Home_hike.jpg" alt="Yue Yu hiking in the mountains"><span>SCIENTIST · EXPLORER</span></a>
+      <div class="hero-copy">
+        <p class="eyebrow">Integrated photonics · quantum transduction</p>
+        <div class="editable-headline" contenteditable="true" role="textbox" aria-label="Editable homepage headline" data-placeholder="Type your headline here" spellcheck="true"></div>
+        <p class="edit-hint">CLICK THE EMPTY AREA TO TRY A HEADLINE · SAVED ON THIS DEVICE</p>
+        <p class="hero-intro">I make photons and phonons do useful things on a chip.</p>
+      </div>
+      <div class="gallery-shell" aria-label="Key research figure gallery">
+        <div class="gallery-track" id="figure-gallery">
+          <a class="gallery-slide" href="LPR_SAW_YU.pdf"><img src="figures/microwave-photonic-filter.png" alt="Surface acoustic microwave photonic filter design"><span><b>01</b> SURFACE ACOUSTIC MWP FILTER</span></a>
+          <a class="gallery-slide" href="NL2023_YU.pdf"><img src="figures/ws2-photon-emitter.png" alt="Monolayer WS2 integrated with a BIC photonic waveguide"><span><b>02</b> PHOTON EMITTER · BIC WAVEGUIDE</span></a>
+          <a class="gallery-slide" href="LSA2022_YU.pdf"><img src="figures/mechanical-bic.png" alt="Construction of a mechanical bound state in the continuum"><span><b>03</b> MECHANICAL BIC</span></a>
+          <a class="gallery-slide" href="ACS2022_YU.pdf"><img src="figures/awg.png" alt="Arrayed waveguide grating architecture"><span><b>04</b> ARRAYED WAVEGUIDE GRATING</span></a>
+          <a class="gallery-slide" href="AOM2021_YU.pdf"><img src="figures/etchless-bic.png" alt="Etchless lithium niobate photonic integrated circuit"><span><b>05</b> ETCHLESS LNOI PHOTONICS</span></a>
+        </div>
+        <div class="gallery-controls"><button type="button" data-gallery="prev" aria-label="Previous research figure">←</button><p><span id="gallery-current">01</span> / 05</p><button type="button" data-gallery="next" aria-label="Next research figure">→</button></div>
+      </div>
       <p class="scroll-note">SCROLL TO EXPLORE ↓</p>
     </section>
     <section class="about section" id="about">
@@ -48,5 +62,17 @@
     </section>
   </main>
   <footer><p>YUE YU · BERKELEY, CALIFORNIA</p><p class="motto">“The known and unknown worlds—I cannot wait.”</p><a href="#top">BACK TO TOP ↑</a></footer>
+  <script>
+    const headline = document.querySelector('.editable-headline');
+    headline.textContent = localStorage.getItem('hero-headline') || '';
+    headline.addEventListener('input', () => localStorage.setItem('hero-headline', headline.textContent.trim()));
+    const gallery = document.querySelector('.gallery-track');
+    const slides = [...document.querySelectorAll('.gallery-slide')];
+    const current = document.querySelector('#gallery-current');
+    const go = direction => gallery.scrollBy({ left: direction * gallery.clientWidth, behavior: 'smooth' });
+    document.querySelector('[data-gallery="prev"]').addEventListener('click', () => go(-1));
+    document.querySelector('[data-gallery="next"]').addEventListener('click', () => go(1));
+    gallery.addEventListener('scroll', () => { current.textContent = String(Math.round(gallery.scrollLeft / gallery.clientWidth) + 1).padStart(2, '0'); }, { passive: true });
+  </script>
 </body>
 </html>
