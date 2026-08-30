@@ -19,7 +19,7 @@
 <body>
   <header class="site-header">
     <a class="wordmark" href="#top">YUE YU</a>
-    <nav aria-label="Primary navigation"><a href="#about">About</a><a href="#research">Research</a><a href="#work">Selected work</a></nav>
+    <nav aria-label="Primary navigation"><a href="#about">About</a><a href="#research">Research</a><a href="#work">Selected work</a><a href="#fun">Fun facts</a></nav>
     <a class="header-link" href="CV_YUYUE.pdf">CV ↗</a>
   </header>
   <main>
@@ -61,6 +61,17 @@
         <a href="lsa_mechanical%20BICs.pdf" class="publication"><span class="pub-index">03</span><span><strong>Mechanical bound states in the continuum</strong><small>Light: Science &amp; Applications 11, 328</small></span><span class="pub-year">2022 ↗</span></a>
       </div>
     </section>
+    <section class="fun section" id="fun">
+      <div class="fun-header">
+        <div><p class="section-number">04 / OFF THE CLOCK</p><h2>Fun <em>facts</em></h2></div>
+        <p class="fun-intro">A few things beyond the lab. Click any card to add or revise your own fact.</p>
+      </div>
+      <div class="fun-grid">
+        <article class="fun-card"><span>01</span><p class="editable-fact" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Editable fun fact one" data-storage-key="fun-fact-1" data-placeholder="Type a fun fact here" spellcheck="true"></p></article>
+        <article class="fun-card"><span>02</span><p class="editable-fact" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Editable fun fact two" data-storage-key="fun-fact-2" data-placeholder="Type another fun fact" spellcheck="true"></p></article>
+        <article class="fun-card"><span>03</span><p class="editable-fact" contenteditable="true" role="textbox" aria-multiline="true" aria-label="Editable fun fact three" data-storage-key="fun-fact-3" data-placeholder="Add one more detail" spellcheck="true"></p></article>
+      </div>
+    </section>
   </main>
   <footer><p>YUE YU · BERKELEY, CALIFORNIA</p><a class="motto" href="https://www.youtube.com/watch?v=Swlxm_msl4k" target="_blank" rel="noopener noreferrer" aria-label="Listen to Die guten Zeiten on YouTube">“Ich suche Liebe und Frieden in meinem Herzen. Die bekannten und unbekannten Welten – ich kann keinen Moment warten!” <span aria-hidden="true">↗</span></a><a href="#top">BACK TO TOP ↑</a></footer>
   <script>
@@ -70,6 +81,15 @@
       headline.addEventListener('input', () => localStorage.setItem('hero-headline', headline.textContent.trim()));
     } catch {
       // The editable headline still works when browser privacy settings block local storage.
+    }
+    const facts = [...document.querySelectorAll('.editable-fact')];
+    try {
+      facts.forEach(fact => {
+        fact.textContent = localStorage.getItem(fact.dataset.storageKey) || '';
+        fact.addEventListener('input', () => localStorage.setItem(fact.dataset.storageKey, fact.textContent.trim()));
+      });
+    } catch {
+      // Fun facts remain editable when browser privacy settings block local storage.
     }
     const gallery = document.querySelector('.gallery-track');
     const slides = [...document.querySelectorAll('.gallery-slide')];
