@@ -28,8 +28,8 @@ nav a:hover, .header-link:hover, .actions a:hover { color: var(--laser); text-sh
 .gallery-shell { min-width: 0; position: relative; border: 1px solid rgba(216,255,62,.28); background: #050706; box-shadow: 0 0 38px rgba(216,255,62,.08); }
 .gallery-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .gallery-track::-webkit-scrollbar { display: none; }
-.gallery-slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; display: grid; grid-template-rows: minmax(0,1fr) auto; height: min(69vh, 720px); background: radial-gradient(circle at 50% 42%, #151a12 0, #080a08 54%, #030403 100%); }
-.gallery-slide img { width: 100%; height: 100%; min-height: 0; object-fit: contain; padding: 1.1rem; filter: invert(.94) hue-rotate(180deg) saturate(.9) contrast(1.12); mix-blend-mode: screen; opacity: .92; }
+.gallery-slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; display: grid; grid-template-rows: minmax(0,1fr) auto; height: min(69vh, 720px); background: #fff; }
+.gallery-slide img { width: 100%; height: 100%; min-height: 0; object-fit: contain; padding: 1.1rem; filter: none; mix-blend-mode: normal; opacity: 1; }
 .gallery-slide > span { display: flex; gap: 1rem; padding: 1rem 1.2rem; background: #070a08; color: var(--ink); border-top: 1px solid rgba(216,255,62,.32); font-size: .67rem; font-weight: 700; letter-spacing: .16em; }
 .gallery-slide b { color: var(--laser); text-shadow: 0 0 10px var(--laser); }
 .gallery-controls { position: absolute; z-index: 3; right: 1rem; top: 1rem; display: flex; align-items: center; gap: .5rem; color: #090b07; background: rgba(243,246,247,.92); border: 1px solid rgba(216,255,62,.65); box-shadow: 0 0 18px rgba(216,255,62,.2); }
@@ -63,7 +63,8 @@ h2 em { font-family: Georgia, serif; font-weight: 400; }
 .publication strong { display: block; font-size: clamp(1.1rem,2vw,1.55rem); line-height: 1.15; }
 .publication small { display: block; margin-top: .7rem; color: var(--muted); font-size: .86rem; text-shadow: none; }
 footer { min-height: 45vh; display: grid; grid-template-columns: 1fr 2fr auto; gap: 2rem; align-items: end; padding: 5rem 3.5vw; border-top: 1px solid var(--line); font-size: .68rem; letter-spacing: .14em; }
-.motto { font-family: Georgia, serif; font-size: clamp(1.5rem,3vw,3rem); letter-spacing: 0; max-width: 680px; margin: 0; }
+.motto { display: block; font-family: Georgia, serif; font-size: clamp(1.5rem,3vw,3rem); line-height: 1.08; letter-spacing: 0; max-width: 680px; margin: 0; transition: color .2s, text-shadow .2s; }
+.motto:hover, .motto:focus-visible { color: var(--laser); text-shadow: 0 0 18px rgba(216,255,62,.35); outline: none; }
 @media (max-width: 800px) {
   .site-header { grid-template-columns: 1fr auto; }
   nav { display: none; }
